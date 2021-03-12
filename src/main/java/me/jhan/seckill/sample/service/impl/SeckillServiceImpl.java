@@ -3,9 +3,11 @@
  */
 package me.jhan.seckill.sample.service.impl;
 
+import io.lettuce.core.AbstractRedisClient;
 import io.lettuce.core.RedisClient;
 import me.jhan.seckill.sample.service.SeckillService;
 import me.jhan.seckill.sample.vo.ResponseVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,8 +19,8 @@ import java.util.Date;
  */
 @Service
 public class SeckillServiceImpl implements SeckillService {
-    @Resource
-    private RedisClient redisClient;
+//    @Resource
+//    private AbstractRedisClient abstractRedisClient;
     @Override
     public ResponseVo seckillProduct(Long productId, Long userId) {
         return null;
